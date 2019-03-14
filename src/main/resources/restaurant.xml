@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<restaurant>
+    <menu>
+        <dish>
+            <name>roast beef</name>
+            <price>380.0</price>
+        </dish>
+        <dish>
+            <name>duck meat</name>
+            <price>550.0</price>
+        </dish>
+        <dish>
+            <name>greek salad</name>
+            <price>300.0</price>
+        </dish>
+        <dish>
+            <name>mushroom soup</name>
+            <price>320.0</price>
+        </dish>
+    </menu>
+    <employees>
+        <employee>
+            <id>1</id>
+            <name>Alex</name>
+            <surname>Smith</surname>
+            <position>director</position>
+            <age>25</age>
+        </employee>
+        <employee>
+            <id>2</id>
+            <name>Bob</name>
+            <surname>Johnson</surname>
+            <position>waiter</position>
+            <age>27</age>
+        </employee>
+        <employee>
+            <id>3</id>
+            <name>Carl</name>
+            <surname>Jones</surname>
+            <position>chef</position>
+            <age>29</age>
+        </employee>
+        <employee>
+            <id>4</id>
+            <name>Donald</name>
+            <surname>Brown</surname>
+            <position>waiter</position>
+            <age>22</age>
+        </employee>
+        <employee>
+            <id>5</id>
+            <name>Ricardo</name>
+            <surname>Millos</surname>
+            <position>dishwasher</position>
+            <age>30</age>
+        </employee>
+    </employees>
+</restaurant>
