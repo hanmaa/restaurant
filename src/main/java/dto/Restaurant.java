@@ -40,4 +40,12 @@ public class Restaurant {
     public void addDish(Dish dish) {
         menu.add(dish);
     }
+
+    @Override
+    public String toString() {
+        return "Restaurant{" +
+                "menu=" + menu +
+                ", employee=" + employee +
+                '}';
+    }
 }

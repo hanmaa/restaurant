@@ -1,26 +1,24 @@
 import dto.Dish;
 import dto.Human;
 import dto.Restaurant;
+import parser.impl.JaxbParser;
+import parser.impl.JsonParser;
+import parser.Parser;
 
-import javax.xml.bind.JAXBContext;
-import javax.xml.bind.JAXBException;
-import javax.xml.bind.Marshaller;
 import java.io.File;
 
 public class Main {
 
     public static void main(String[] args) {
         Restaurant restaurant = new Restaurant();
+        File jaxbFile = new File("src/main/resources/restaurant.xml") ;
+        File jsonFile = new File("src/main/resources/restaurant.json") ;
         addItems(restaurant);
         addEmployee(restaurant);
-        try {
-            JAXBContext context = JAXBContext.newInstance(Restaurant.class);
-            Marshaller marshaller = context.createMarshaller();
-            marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
-            marshaller.marshal(restaurant, new File("src/main/resources/restaurant.xml"));
-        } catch (JAXBException e) {
-            e.printStackTrace();
-        }
+        Parser jaxb = new JaxbParser();
+        Parser json = new JsonParser();
+        jaxb.convertTo(jaxbFile, restaurant);
+        json.convertTo(jsonFile, restaurant);
     }
 
     private static void addItems(Restaurant restaurant) {
